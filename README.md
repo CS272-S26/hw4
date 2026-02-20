@@ -38,6 +38,19 @@ You should then build a result message and display it in a single `alert`:
 
 These scenarios should help you test your code! Please test your code thoroughly; these are just examples to help you in your testing.
 
+### Scenario 0
+
+| Field | Value |
+| --- | --- |
+| Number of Drinks | 4 |
+| Price Per Drink | <empty> |
+| Tip Percentage | 10% |
+| Has Loyalty Points? | <empty> |
+
+> Please fill out all fields before continuing.
+
+1 or more inputs were left empty, so the user is prompted to complete the form before continuing.
+
 ### Scenario 1
 
 | Field | Value |
@@ -73,7 +86,7 @@ Subtotal is $20.00, so a 10% discount is applied: $20.00 - $2.00 = $18.00. Tip i
 | Tip Percentage | 20% |
 | Has Loyalty Points? | Yes |
 
-> Your total is $14.40. You earned a free pastry!
+> Your total is $16.20. You earned a free pastry!
 
 Subtotal is $13.50, which is under $20 so no discount. Tip is 20% of $13.50 = $2.70. Total = $16.20. Has loyalty, so a free pastry is earned.
 
@@ -86,11 +99,11 @@ Subtotal is $13.50, which is under $20 so no discount. Tip is 20% of $13.50 = $2
 | Tip Percentage | No Tip |
 | Has Loyalty Points? | No |
 
-> Your total is $31.4. Discount applied!
+> Your total is $31.46. Discount applied!
 
-Subtotal is $34.95, so a 10% discount is applied: $34.95 - $3.495 = $31.455. Tip is 0% of $31.455 = $0.00. Total = $31.45. No loyalty, so no free pastry.
+Subtotal is $34.95, so a 10% discount is applied: $34.95 - $3.495 = $31.455. Tip is 0% of $31.455 = $0.00. Total = $31.46. No loyalty, so no free pastry.
 
-Due to floating point number representation, `toFixed(2)` rounds `31.455` to `31.45` despite what your intuition may say! [Learn more here.](https://www.youtube.com/watch?v=PZRI1IfStY0) We won't get picky over pennies, though.
+Due to floating point number representation and rounding, you may get $31.45 instead! [Learn more here.](https://www.youtube.com/watch?v=PZRI1IfStY0) We won't get picky over pennies, though -- either is fine.
 
 ## Submission
 
